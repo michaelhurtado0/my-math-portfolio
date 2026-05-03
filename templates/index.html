@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Michael | Portfolio</title>
+    <link rel="icon" type="favicon-32x32/png" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Your Name</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+
+
+<body>
+
+
+<nav class="main-nav">
+    <div class="nav-content">
+        <div class="logo">Michael</div>
+        
+        <div class="nav-links">
+            <a href="/biography" class="cta-link">About me (coming soon)</a>
+            <a href="/" class="active">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<div class="header-spacer"></div>
+
+
+    <header class="hero">
+        <h1>Hello! I'm Michael, a Mathematics undergraduate student.<br>
+        <span class="indent-line">Take a look at my journey during my first year. I build solutions for the modern web.</span>
+        </h1>
+    </header>
+
+    <section class="remarkable-section">
+    <div class="project-card" data-aos="fade-up">
+        <div class="text-side">
+            <span class="category">Year 1</span>
+            <h2>Calculus and Mathematical Analysis</h2>
+            <p>Predicting categorical targets using R-Studio. This study analyzes predictors to maximize accuracy.</p>
+            <a href="/calculus" class="cta-link">View Case Study →</a>
+        </div>
+        <div class="image-side">
+            <img src="/static/img/tree.png" alt="Decision Tree">
+        </div>
+    </div>
+    </section>
+    <section class="remarkable-section">
+    <div class="project-card" data-aos="fade-up">
+        <div class="image-side">
+            <img src="/static/img/plotcovid4.png" alt="Decision Tree">
+        </div>
+        <div class="text-side">
+            <span class="category">Year 1</span>
+            <h2>Vectors and Matrices</h2>
+            <p>Predicting categorical targets using R-Studio. This study analyzes predictors to maximize accuracy.</p>
+            <a href="/maths" class="cta-link">View Case Study →</a>
+        </div>
+    </div>
+    </section>
+    <section class="remarkable-section">
+    <div class="project-card" data-aos="fade-up">
+        <div class="text-side">
+            <span class="category">Year 1</span>
+            <h2>Probability and Randomness</h2>
+            <p>Predicting categorical targets using R-Studio. This study analyzes predictors to maximize accuracy.</p>
+            <a href="#" class="cta-link">View Case Study →</a>
+        </div>
+        <div class="image-side">
+            <img src="/static/img/tree.png" alt="Decision Tree">
+        </div>
+    </div>
+    </section>
+    <section class="remarkable-section">
+    <div class="project-card" data-aos="fade-up">
+        <div class="image-side">
+            <img src="/static/img/plotcovid4.png" alt="Decision Tree">
+        </div>
+        <div class="text-side">
+            <span class="category">Year 1</span>
+            <h2>Discrete Mathematics</h2>
+            <p>Logic, sets, and graph theory analysis...</p>
+            <a href="/discrete" class="cta-link">View Case Study →</a>
+        </div>
+    </div>
+    </section>
+
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p class="footer-label">Contact</p>
+        <h2 class="footer-name">Michael Cedeno Hurtado</h2>
+        <p class="footer-tagline">A student focused on better experiences, and a researcher focusing on better solutions.
+        </p>
+        
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/michael-cedeno-hurtado-b745632b1/" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/michaelhurtado0" target="_blank">Instagram</a>
+            <a href="michaelcedeniohurtado@gmail.com" target="_blank">E-mail</a>
+        </div>
+        
+        <div class="footer-bottom">
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,      // Slightly slower is more elegant
+    easing: 'ease-in-out', // Makes the movement feel natural
+    once: true,          // Usually, product pages only animate once as you go down
+    mirror: false        // Prevents it from re-animating when you scroll back up
+});
+</script>
+
+</body>
+</html>

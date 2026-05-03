@@ -1,0 +1,495 @@
+/* 1. Global Dark Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Replace 'your-image.jpg' with your actual filename */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/static/img/geometry_pic.png');
+    
+    /* This keeps the image fixed so it doesn't move when you scroll */
+    background-attachment: fixed;
+    
+    /* This ensures the image stretches to cover the whole screen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Keep your existing font settings */
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding-top: 100px;
+}
+
+
+/* 2. Navigation Links */
+nav a, .nav-links a {
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7; /* Fades slightly when you hover */
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Spans the whole screen */
+    background-color: rgba(0, 0, 0, 0.3); /* Slight transparency for a premium feel */
+    z-index: 1000;
+    padding: 30px 0; /* Vertical padding (makes it less 'big') Esto es la cortina negra transparente del encabezado */
+
+}
+
+.main-nav .logo {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px; /* Spread out letters for a modern look */
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Consistent space between Resume and Contact, arriba del todo*/
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.nav-content {
+    max-width: 1200px; /* Adjust this to match the width of your project grid */
+    margin: 0 auto;    /* This centers the container */
+    padding: 0 5%;     /* Space on the sides so it doesn't touch the screen edge */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-spacer {
+    height: 1px; 
+}
+
+/* 3. Hero and Project Titles */
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    padding: 0 8%;
+    color: #ffffff;
+    text-align: center;
+    font-style: italic; /* Optional: adds a nice design touch */
+
+}
+
+.indent-line {
+    display: block;   /* Forces it to behave like a new line */
+    margin-left: 0%; /* Pushes the text toward the middle */
+    color: #888888;   /* Optional: make the second line grey like Iris's site */
+    font-style: italic; /* Optional: adds a nice design touch */
+}
+
+
+.category-tag {
+    color: #aaaaaa; /* Light grey so it doesn't compete with the title */
+}
+
+.project-info h3 {
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+/* 4. The Project Grid (2 Columns) */
+/*.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two side-by-side */
+    gap: 30px;
+    padding: 0 5% 100px 5%;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Make sure this isn't a huge number like 200px */
+    padding-bottom: 0px;
+}
+
+.project-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 1. The Container */
+/*.image-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+}
+
+/* 2. The Images (Main and Hover) */
+/*.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute; /* They need to stack! */
+    top: 0;
+    left: 0;
+    /* This ensures filters like blur are ready to animate */
+    transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+/* Hide the hover image initially */
+/*.img-hover {
+    opacity: 0;
+    z-index: 1;
+}
+
+.img-main {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* 3. The Hover Effect - Apply to BOTH at once */
+/*.image-box:hover img {
+    filter: blur(4px) brightness(0.6) !important;
+    -webkit-filter: blur(4px) brightness(0.6) !important;
+    transform: scale(1.1);
+}
+
+/* Swapping the images during hover */
+/*.image-box:hover .img-main {
+    opacity: 0;
+}
+/*.image-box:hover .img-hover {
+    opacity: 1;
+}
+
+/* 4. The Overlay (Text) */
+/*.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Perfect Centering
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text Styling 
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Adds space between letters for a premium look */
+    
+    /* Background & Interaction 
+    background: rgba(0, 0, 0, 0.3); /* Subtle dimming 
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 10;
+    padding: 20px;
+    
+    transform: translateY(10px);
+}
+
+
+/*.overlay span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* This makes the text itself center inside the pill 
+    text-align: center;
+    display: block; 
+    
+    /* The Pill Styling 
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 12px 20px; 
+    border-radius: 50px;
+    
+    /* Ensures long text wraps nicely and stays centered 
+    max-width: 90%;
+    -height: 1.2;
+    
+}
+
+/* This hides the pill if there is no text inside it */
+/*.overlay span:empty {
+    display: none;
+    border: none;
+}
+
+/* Also, ensure your overlay isn't creating a 'Ghost' pill */
+/*.overlay::after {
+    display: none !important; /* This removes the old border we tried earlier */
+}
+
+/*.image-box:hover .overlay {
+    opacity: 1; /* Note: Changed 90 to 1 (Opacity max is 1) 
+    transform: translateY(0);
+}*/
+
+
+.site-footer {
+    /* 1. Reduce the internal space at the top of the footer */ 
+    padding: 60px 8% 60px 8%; /* Changed from 120px to 60px */
+    
+    /* 2. Reduce the gap between the project boxes and the footer */
+    margin-top: 20px; /* Changed from 100px to 40px */
+    
+    border-top: 1px solid #222;
+    
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 50px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left for a premium look */
+}
+
+
+.footer-label {/* modifica MICHAEL CEDENO HURTADO en la parte de abajo de la pagina*/
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.footer-name {/*cambia grosor de las letras MICHAEL CEDENO HURTADO */
+    font-size: 3.5rem; /* Big and bold */
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.footer-tagline {/* Cambia el texto debajo de MICHAEL CEDENO HURTADO */
+    font-size: 1.5rem;
+    color: #bbbbbb;
+    max-width: 500px;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    font-style: italic; /* Optional: adds a nice design touch */
+
+}
+
+.footer-socials {/* distancia entre linked e Instagram */
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.footer-socials a { /* Mueve mas arriba o abajo el texto footer entero */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.footer-contact {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left for a premium look */
+}
+
+
+.footer-socials a:hover { /*No tengo hover asi q no afecta por ahora*/ 
+    border-bottom: 1px solid #ffffff;  Underline appears on hover 
+}
+
+
+.footer-bottom {/* creo que no hace nada */
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/*.scroll-section { Creo que no hace nada por ahora
+    min-height: 100vh; /* Every section is exactly the height of your screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+}
+
+/*.project-container { Creo que no hace nada por ahora
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Add this to the VERY FIRST section of your page only */
+.remarkable-section:first-of-type {
+     /* Adjust this number based on your header's height. Cambia el espacio del borde izquiero de la pagina */
+    margin-top: 100px;
+}
+
+
+/* This ensures each project is a vertical 'chapter' */
+.remarkable-section {
+    width: 100%;
+    min-height: auto; /* Full screen height. Not sure what is this for */
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    margin: 0 auto 60px auto;
+    /* 1. THE GAP FIX: Use a large margin to separate the boxes */
+    margin: 40px auto;
+    padding: 60px 40px;
+    border-radius: 30px;
+    
+    box-sizing: border-box;
+    /* The 0.8 means 80% opacity. Opacidad de la caja*/
+    background-color: rgba(26, 26, 26, 0.2); 
+    backdrop-filter: blur(10px); /* This creates a beautiful 'frosted glass' effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+}
+
+
+/* This makes the text and image sit side-by-side INSIDE the section */
+.project-card {
+    display: flex;
+    flex-direction: row; /* Side by side */
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+/* If the image is missing, it's usually because it has no width! */
+.image-side {
+    flex: 1.1; /* Image takes slightly more space than text */
+    display: flex;
+    justify-content: center;}
+
+.image-side img {
+    width: 100%; /* Force the image to fill its half */
+    height: auto;
+    display: block;
+    border-radius: 20px;/* hace que el borde de la caja sea mas redondo*/
+    object-fit: cover;
+    transition: transform 0.5s ease; /* hace q el zoom se vea mas smooth, me gusta*/
+}
+
+.text-side {
+    flex: 1; /* Takes up the other half */
+}
+
+ /*On hover, the image can slightly lift, like reMarkable 
+.image-side:hover img {
+    transform: translateY(-10px);
+    transition: transform 0.4s ease;
+}
+/*El codigo para que al seleccionar la foto tenga el efecto de subir un poco hacia arriba
+*/
+
+.image-side:hover img {
+    transform: scale(1.05); /* Only 8% zoom is enough for a premium feel. Hace que al seleccionar la foto se vea mas grande, me gusta*/
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .remarkable-section {
+        height: auto;
+        padding: 100px 20px;
+    }
+}
+
+/*BIOGRAPHY*/
+
+/* Minimalist Bio Styles */
+.bio-container {
+    max-width: 1200px;
+    margin: 5px auto;
+    padding: 60px;
+/*glass effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); /* Support for Safari */ 
+    border-top: 1px solid #ffffff; /* Minimalist top line */
+    border-bottom: 1px solid #ffffff; /* Minimalist bottom line */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 40px;
+
+}
+
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.bio-image img {
+    width: 100%;
+    border-radius: 0; /* Sharp corners for a modern look */
+    border: 1px solid #ffffff;
+    padding: 10px;
+}
+
+.bio-content h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.bio-lead {
+    font-size: 1rem;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.bio-text p {
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 300; /* Light weight for elegance */
+}
+
+.bio-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+    font-style: italic;
+    color: #888888;
+}

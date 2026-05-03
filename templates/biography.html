@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Michael | Portfolio</title>
+    <link rel="icon" type="favicon-32x32/png" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Your Name</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="logo">MICHAEL</div>
+            
+            <div class="nav-links">
+                <a href="/" class="active">About me (coming soon)</a>
+                <a href="/" class="active">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <nav style="padding: 20px;">
+        <a href="{{ url_for('index') }}" style="color: white; text-decoration: none; font-weight: bold;">← Back to Portfolio</a>
+    </nav>
+
+    <header class="hero">
+    <h1 style="font-size: 4rem; line-height: 1.2;">
+        "Change happens through movement, and movement heals"<br>
+        <span class="indent-line" style="font-size: 2rem; display: block; margin-top: 10px;">
+            Joseph Pilates
+        </span>
+    </h1>
+    </header>
+
+   <main class="bio-container">
+    <div class="bio-grid">
+        <div class="bio-image">
+            <img src="{{ url_for('static', filename='img/half_marathon.jpg') }}" alt="Michael">
+        </div>
+
+        <div class="bio-content">
+            <h1>Michael</h1>
+            <p class="bio-lead">Mathematics Student & Pilates Instructor</p>
+            
+            <div class="bio-text">
+                <p>
+                    My journey began in the world of numbers and logic. As a Mathematics student, I developed a deep appreciation for the elegance of data and the "why" behind complex systems—a passion that currently drives my research in R-Studio.
+                </p>
+                <p>
+                    However, I believe in a balance between mind and body. This passion for movement led me to complete my **Mat Pilates Instructor certificate**, allowing me to share the discipline of physical alignment with others. I thrive on personal challenges, having recently completed a **half marathon** and two **10k runs**.
+                </p>
+                <p>
+                    Beyond the classroom and the studio, I am an avid traveler and volunteer. Last year, I spent time in **Nepal**, living with a local family to assist with their daily duties, including harvesting vegetables. Immersing myself in their culture and contributing to their day-to-day lives remains one of my most transformative experiences.
+                </p>
+            </div>
+
+            <div class="bio-footer">
+                <p>Exploring the intersection of data, movement, and global community.</p>
+            </div>
+        </div>
+    </div>
+   </main>
+</body>
+</html>

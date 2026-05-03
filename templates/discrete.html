@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Michael | Portfolio</title>
+    <link rel="icon" type="favicon-32x32/png" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Your Name</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="logo">MICHAEL</div>
+            
+            <div class="nav-links">
+                <a href="/" class="active">About me (coming soon)</a>
+                <a href="/" class="active">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <nav style="padding: 20px;">
+        <a href="{{ url_for('index') }}" style="color: white; text-decoration: none; font-weight: bold;">← Back to Portfolio</a>
+    </nav>
+
+    <main style="max-width: 800px; margin: 100px auto; padding: 20px; background: rgba(0,0,0,0.8); border-radius: 20px;">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Discrete Maths</h1>
+        <p style="color: #ccc; line-height: 1.8;">
+            Write your detailed explanation here. You can talk about your R-Studio findings, 
+            show your formulas, and explain the "why" behind your research.
+        </p>
+        
+        <img src="/static/img/tree.png" alt="Analysis Result" style="width: 100%; margin-top: 40px; border-radius: 10px;">
+    </main>
+    <section class="remarkable-section">
+    <div class="project-card" data-aos="fade-up">
+        <div class="image-side">
+            <img src="/static/img/plotcovid4.png" alt="Decision Tree">
+        </div>
+        <div class="text-side">
+            <span class="category">Year 1</span>
+            <h2>Calculus</h2>
+            <p>Predicting categorical targets using R-Studio. This study analyzes predictors to maximize accuracy.</p>
+            <a href="#" class="cta-link">View Case Study →</a>
+        </div>
+    </div>
+    </section>
+</body>
+</html>
