@@ -14,18 +14,15 @@
     <nav class="main-nav">
         <div class="nav-content">
             <div class="logo">MICHAEL</div>
-            
             <div class="nav-links">
-                <a href="/" class="active">About me (coming soon)</a>
-                <a href="/" class="active">Contact</a>
+                <a href="/" class="active">About me</a>
+                <a href="/cv" class="cta-link">CV</a>
             </div>
         </div>
     </nav>
-    
     <nav style="padding: 20px;">
         <a href="{{ url_for('index') }}" style="color: white; text-decoration: none; font-weight: bold;">← Back to Portfolio</a>
     </nav>
-
     <header class="hero">
     <h1 style="font-size: 4rem; line-height: 1.2;">
         "Change happens through movement, and movement heals"<br>
@@ -36,10 +33,7 @@
     </header>
 
    <main class="bio-container">
-    <div class="bio-grid">
-        <div class="bio-image">
-            <img src="{{ url_for('static', filename='img/half_marathon.jpg') }}" alt="Michael">
-        </div>
+
 
         <div class="bio-content">
             <h1>Michael</h1>
@@ -47,13 +41,32 @@
             
             <div class="bio-text">
                 <p>
-                    My journey began in the world of numbers and logic. As a Mathematics student, I developed a deep appreciation for the elegance of data and the "why" behind complex systems—a passion that currently drives my research in R-Studio.
+                    My name is Michael and I am an enthusiastic mathematics student. 
+                    During my first year I developed a strong passion for Statistics and Data Analysis. 
+                    Motivated by this interest I decided exploring advanced data-gathering 
+                    techniques independently, focusing on presenting complex technical information in a clear and 
+                    professional manner. This journey has shown me the big importance of data in today’s 
+                    world and how diverse analytical methods can be applied to solve real-world problems and predict future outcomes.
                 </p>
                 <p>
-                    However, I believe in a balance between mind and body. This passion for movement led me to complete my **Mat Pilates Instructor certificate**, allowing me to share the discipline of physical alignment with others. I thrive on personal challenges, having recently completed a **half marathon** and two **10k runs**.
+                    Beyond my academic pursuits, I am very interested in learning about other cultures. 
+                    This curiosity recently led me to participate in a two-week intercultural 
+                    exchange program with students from the 
+                    Henan University of Economics and Law 
+                    in China. Immersing myself in this program offered me incredible new insights, broadening my 
+                    perspective and enriching my understanding of their millenarium culture.
                 </p>
                 <p>
-                    Beyond the classroom and the studio, I am an avid traveler and volunteer. Last year, I spent time in **Nepal**, living with a local family to assist with their daily duties, including harvesting vegetables. Immersing myself in their culture and contributing to their day-to-day lives remains one of my most transformative experiences.
+                    This experience builds on my previous international volunteering work in Kathmandu, Nepal. 
+                    There, I spent two weeks supporting a local family as they rebuilt their lives following an earthquake, 
+                    assisting them with essential daily duties and community tasks.
+                </p>
+                <p>
+                    Outside of mathematics, you will probably find me doing some exercise. 
+                    I am very passionate about sports and physical health, which led me to 
+                    participate in my first half marathon and two 10k running events in London. 
+                    This passion is what inspired me to earn my certificate as a Pilates instructor, 
+                    making it one of my favourite ways to stay grounded and help others move better.
                 </p>
             </div>
 
@@ -61,7 +74,7 @@
                 <p>Exploring the intersection of data, movement, and global community.</p>
             </div>
         </div>
-    </div>
+
    </main>
 </body>
 </html>

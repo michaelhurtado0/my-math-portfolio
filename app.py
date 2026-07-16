@@ -35,6 +35,22 @@ def discrete():
 def biography():
     return render_template("biography.html")
 
+# --- PAGE 5: HTML
+@app.route("/math-report")
+def math_report():
+    # This renders the exact HTML file you knitted in RStudio
+    return render_template("meteor_markdown.html")
+
+# --- PAGE 6: HTML
+@app.route("/math-report2")
+def math_report2():
+    # This renders the exact HTML file you knitted in RStudio
+    return render_template("covid.html")
+
+@app.route("/cv")
+def cv():
+    # This renders the exact HTML file you knitted in RStudio
+    return render_template("michael_cv_markdown.html")
 
 # --- THE START BUTTON ---
 if __name__ == "__main__":

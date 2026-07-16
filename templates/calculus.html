@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <title>Michael | Portfolio</title>
     <link rel="icon" type="favicon-32x32/png" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
@@ -20,6 +19,8 @@
             <div class="nav-links">
                 <a href="/" class="active">About me (coming soon)</a>
                 <a href="/" class="active">Contact</a>
+                <a href="/cv" class="cta-link">CV</a>
+
             </div>
         </div>
     </nav>
@@ -35,6 +36,8 @@
             \[ \hat{\beta} = (X^T X)^{-1} X^T y \]
             <br>
             This formula allowed me to minimize the error in my COVID-19 predictor model.
+            <br>
+            <a href="/math-report" class="cta-link">View R-Studio Analysis →</a>
         </p>
         
         <img src="/static/img/tree.png" alt="Analysis Result" style="width: 100%; margin-top: 40px; border-radius: 10px;">
